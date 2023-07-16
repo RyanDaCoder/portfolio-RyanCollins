@@ -9,21 +9,22 @@
 
 body {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr 3fr;
   height: 100vh;
-
+  margin: 0;
 }
+
+
+
 .navbar {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Updated value */
+  justify-content: flex-start;
   align-items: center;
   background-color: #333;
   color: #fff;
   padding: 20px;
-  width: 25%;
-  min-width: 300px;
-  max-width: 400px;
+  width: 100%;
 }
 
 .navbar img {
@@ -66,6 +67,7 @@ body {
 .navbar .nav-links a i {
   font-size: 1.2em;
 }
+
 .content {
   display: flex;
   flex-direction: column;
@@ -98,10 +100,3 @@ i {
   background-color: #333;
 }
 
-@media (min-width: 768px) {
-  .navbar {
-    width: 25%; /* One-fourth of the screen on larger devices */
-    min-width: 300px; /* Minimum width to ensure at least one-fourth of the screen */
-    max-width: 400px; /* Maximum width to limit the navbar's size */
-  }
-}
