@@ -6,32 +6,33 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 body {
   display: grid;
-  grid-template-columns: 1fr;
-  font-family: Arial, sans-serif;
+  grid-template-columns: auto 1fr;
   height: 100vh;
+
 }
 .navbar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Updated value */
   align-items: center;
   background-color: #333;
   color: #fff;
   padding: 20px;
-  width: 100%;
+  width: 25%;
+  min-width: 300px;
+  max-width: 400px;
 }
+
 .navbar img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin-bottom: 20px;
+  border: 3px solid #fff; /* Add a border */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Add a shadow effect */
 }
 .navbar .socials {
   display: flex;
@@ -53,6 +54,15 @@ body {
   gap: 10px;
   margin: 10px 0;
 }
+
+.nav-links {
+  padding-top: 30px;
+}
+
+.navbar h2 {
+  padding-bottom: 20px; /* Add desired padding */
+}
+
 .navbar .nav-links a i {
   font-size: 1.2em;
 }
@@ -61,14 +71,37 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('background.jpg'); /* Your image URL */
+  background-image: url(vectors);
   background-size: cover;
   padding: 20px;
   text-align: center;
   color: #fff;
 }
+
+i {
+  color: white;
+}
+
+.bubble {
+  background-color: gray;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+.bubble i {
+  margin-top: 7px;
+  margin-left: 7px;
+}
+
+.title {
+  background-color: #333;
+}
+
 @media (min-width: 768px) {
-  body {
-      grid-template-columns: 300px 1fr;
+  .navbar {
+    width: 25%; /* One-fourth of the screen on larger devices */
+    min-width: 300px; /* Minimum width to ensure at least one-fourth of the screen */
+    max-width: 400px; /* Maximum width to limit the navbar's size */
   }
 }
